@@ -1,1 +1,2 @@
-# Proyecto sistema para reportes de lectura
+# Proyecto para la materia "Tecnologias web II"
+### Sistema para reportes de lectura
