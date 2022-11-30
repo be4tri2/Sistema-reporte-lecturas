@@ -1,0 +1,16 @@
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 900px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

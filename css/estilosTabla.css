@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+  }
+  
+  .container-table {
+    border-radius: 5px;
+    overflow: visible;
+    background-color: rgba(0, 102, 204, 0.8)
+  }
+  
+  .header-table {
+    margin: auto;
+    background-color: rgba(0 , 0, 0, 0);
+  }
+  
+  .table {
+    margin-bottom: 0px;
+    border-bottom: 3px solid rgba(255, 166, 0, 0.806);
+  }
+  
+  .thead {
+    background-color: rgba(10, 129, 150, 0.5);
+    color: aliceblue;
+  }
+  
+  .t-body__tr {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* color: aliceblue; */
+  }
+  
+  .titulo-tabla {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .form-label {
+    color: rgb(188, 187, 187);
+  }
+  
+  .form-select {
+    color: rgb(151, 10, 10);
+    border-radius: 50px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .form-select {
+      width: 150px;
+    }
+  
+    .form-label {
+      width: 70px;
+    }
+  
+    .f-l-2 {
+      width: auto;
+    }
+  }
+  
+  

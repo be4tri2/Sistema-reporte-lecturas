@@ -1,0 +1,76 @@
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.pagina {
+  position: relative;
+  min-height: 92%;
+}
+.contenido {
+  padding-bottom:5px; /* este valor debe ser igual o mayor al alto del pie */
+}
+#tituloModulo{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+.estiloGestionar{
+  color: white;
+  background-color:#0d1e5e;
+  font-family:Optima;
+  font-size: 17px ;
+  width: 80% ;
+  height: 99% ;
+}
+.estiloGestionar:hover{
+  background-color: rgb(127, 127, 127);
+  color: azure;
+}
+.piePagina{
+  background-color: #0d375e;
+  height:auto !important;
+  /* line-height:50px !important; */
+  bottom:0 !important;
+  left:0 !important;
+  width:100% !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 15px;
+  position: absolute;
+}
+.btn{
+  border-radius: 15px;
+  
+}
+.colorazul{
+  background-color:#0d375e;
+  font-family: Optima;
+}
+
+.nomUsuario{
+  font-family: Optima;
+    
+}
+
+blockquote{
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modal-border{
+  border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

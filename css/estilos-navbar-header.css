@@ -1,0 +1,238 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --first-color: #4723d9;
+  --first-color-light: #AFA5D9;
+  --white-color: #F7F6FB;
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 101
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem !important;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+  height: 90%;
+}
+
+.contenedor-icono-hamburguesa {
+  position: fixed;
+  top: 0px;
+  z-index: 102;
+  color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/**
+     * Clase que se le agrega/quita al contenedor-menu-hamburguesa al darle click.
+     * Para moverlo junto con el nav-bar.
+     */
+.recorre__contenedor-menu-hamburguesa {
+  transition: all .5s ease;
+  margin-left: 220px;
+}
+
+/*----------------------**/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 1rem;
+  transition: .5s;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/**
+ * Círculo posicionado detrás de los ícono: notificaciones y perfil de usuario.
+*/
+.circulo-iconos {/*se oculta cuando se hace pequeña la pantalla*/
+  position: fixed;
+  top: -240px;
+  right: -265px;
+  z-index: 102;
+  width: 0;
+  height: 300px;
+  border-radius: 0px 600px 1000px 900px;
+  border-radius: 15%;
+  background-color: var(--first-color);
+  transition: all 1s ease;
+}
+
+/**
+ * Div vacío para que "justify-content: space-between;" funcione como si tuviera tres elementos.
+*/
+.header__div-vacio {
+  width: 75px;
+}
+
+.lista-semestres__select {
+  border-radius: 50PX;
+  background-color: orange;
+  color: #f1f1f7;
+}
+
+/*----------------------**/
+
+.contenedor-nav-bar { /*su id es "nav-var"*/
+  position: fixed;
+  top: 0;
+  left: -45%;
+  z-index: var(--z-fixed);
+  width: var(--nav-width);
+  height: 100%;
+  padding: .5rem 1rem 0 0;
+  background-color: var(--first-color);
+  transition: .5s;
+}
+
+.mostrar-nav-bar {/*se activa con evento click*/
+  left: 0
+}
+
+.recorre-contenedor-nav-bar {/*se activa con evento click*/
+  width: calc(var(--nav-width) + 165px + 0px)
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav_logo,
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem
+}
+
+.nav_logo {
+  margin-bottom: 2rem;
+}
+
+.nav_logo .img-logo {
+  width: 120px;
+  margin-left: 30%;
+}
+
+.nav_link {
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 1.5rem;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  color: var(--white-color)
+}
+
+.nav_link .nav_icono {
+  height: 20px;
+}
+
+.nav_link .nav_name {
+  width: calc(var(--nav-width) + 89px);
+  height: auto;
+}
+
+.nav_link-active {
+  color: var(--white-color)
+}
+
+.nav_lista-opciones .nav_link-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: orangered
+}
+
+/**--------------------------------*/
+.contenedor-principal {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  margin-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* Esta clase la ocupa el body y el header*/
+.agrega-padding-left {/*se activo con evento click en el menu hamburguesa*/
+  padding-left: calc(var(--nav-width) + 188px + 0px) !important;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  body {/*para recorrer el header y contenedor principal*/
+    padding-left: calc(var(--nav-width) + 2rem) !important;
+  }
+
+
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem) !important;
+  }
+
+  .contenedor-nav-bar {
+    left: 0;
+    padding: 1rem 1rem 0 0 !important;
+  }
+
+  .mostrar-nav-bar {/*se activa con evento click*/
+    width: calc(var(--nav-width) + 165px + 0px)
+  }
+  
+  /* Esta clase la ocupa el body y el header*/
+  .agrega-padding-left {/*se activa con evento click*/
+    padding-left: calc(var(--nav-width) + 188px + 0px) !important;
+  }
+  
+  .circulo-iconos {
+    top: -200px;
+    right: -245px;
+    width: 450px;
+    height: 300px;
+    border-radius: 45%;
+  }
+}

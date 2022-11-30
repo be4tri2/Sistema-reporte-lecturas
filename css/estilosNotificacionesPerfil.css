@@ -1,0 +1,161 @@
+.header__navbar-right {
+    margin-left: 15px;
+}
+
+.navbar-right ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/*circulo para la de campana de notificaciones*/
+.item-notificaciones span.circulo-notificacion {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 10px;
+    width: 10px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 0;
+    text-align: center;
+}
+
+.navbar-right_icono {
+    height: 30px;
+    width: auto;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-right_icono {
+        height: 40px;
+        width: auto;
+        line-height: 40px;
+        font-size: 40px;
+        transition: all 600ms ease;
+    }
+}
+
+.navbar-right .iq-show .iq-sub-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
+/*modal para el perfil y las notificaciones*/
+.navbar-right .iq-sub-dropdown {
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    background: #ffffff;
+    transform: translate(0, 70px);
+    transition: all 0.3s;
+    padding: 0;
+    box-shadow: 0 0 10px 0 rgba(5, 5, 5, 0.5);
+    transition: all 0.3s ease-out 0s;
+    z-index: 103;
+    border-radius: 5px;
+}
+
+.item-notificaciones .item__modal {
+    height: auto;
+    max-height: 300px;
+}
+
+.item-perfilusuario .item__modal {
+    height: auto;
+}
+
+/*opciones del perfil de usuario*/
+.navbar-right li .item__modal .iq-sub-card {
+    position: relative;
+    font-size: inherit;
+    padding: 15px 15px;
+    line-height: normal;
+    color: inherit;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+
+/*para crear divisiones para las notificaciones*/
+.item__modal .division {
+    border: 20px solid;
+    border-image-slice: 1;
+    border-width: 0 0 1px 0;
+    border-image-source: linear-gradient(to right, rgba(148, 146, 144, 0.6), rgba(209, 208, 207, 0.3), rgba(209, 208, 207, 0));
+}
+
+.item__modal .col-padless {
+    padding: 0 !important;
+}
+
+.iq-sub-card__icono,
+.opciones__contenido {
+    display: flex;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 80% !important;
+    height: 80% !important;
+}
+
+.contenido-notificacion {
+    font-size: 12;
+    font-family: 'Roboto';
+    font-style: italic;
+}
+
+.nombre-perfil {
+    color: black;
+    font-style: bold;
+    text-align: center;
+}
+
+.opciones__contenido i {
+    font-size: 1.3em;
+    display: flex;
+    color: inherit;
+}
+
+.al {
+    position: relative;
+    color: rgb(41, 40, 39);
+    text-decoration: none;
+    outline: medium none;
+    transition: all 0.5s ease-out 0s;
+    z-index: 103;
+}
+
+.al:hover {
+    color: #0d1f99 !important;
+}
+
+.navbar-right li .iq-sub-dropdown .item-perfilusuario .opciones:hover {
+    background-color: rgba(209, 208, 207, 0.6);
+}
+
+/*---------------*/
+.centrar-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alinear-texto {
+    padding-right: 5px;
+    float: right;
+    margin-left: 10px;
+}
+/*---------------*/
+
+/*Ajustar la altura del modal*/
+
+
+/*ajustar la foto de perfil del usuario y el icono de notificaciones*/
