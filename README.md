@@ -1,1 +1,1 @@
-# Sistema-reporte-lecturas
+# Proyecto sistema para reportes de lectura
